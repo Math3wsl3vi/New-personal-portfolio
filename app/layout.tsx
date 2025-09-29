@@ -1,18 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
 import "./globals.css"
 
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist",
-})
+// No font import is needed here anymore
 
 export const metadata: Metadata = {
-  title: "Felix Macaspac - HubSpot CMS Developer",
-  description: "HubSpot CMS Developer from Philippines with 5 years of experience.",
-  generator: "v0.app",
+  title: "Levi Kulei - Full Stack Developer",
+  description: "Full Stack Developer from Kenya with 5 years of experience.",
 }
 
 export default function RootLayout({
@@ -21,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en">
+      {/* No className is needed on the body tag for the font */}
+      <body className="antialiased">{children}</body>
     </html>
   )
-}
+} 
